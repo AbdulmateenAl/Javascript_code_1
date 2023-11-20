@@ -35,3 +35,10 @@ buttonA.onclick = () => {
     const storedName = localStorage.getItem("name")
     alert("Welcome, " + storedName)
 }
+
+const textBox = document.querySelector('#textbox');
+const output = document.querySelector('#output');
+
+textBox.addEventListener("keydown", (event) => {
+    output.textContent = `You pressed "${event.key}".`;
+  });
